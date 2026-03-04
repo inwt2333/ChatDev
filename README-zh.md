@@ -134,21 +134,21 @@ make dev
 1.  **启动后端**：
     ```bash
     # 从项目根目录运行
-    uv run python server_main.py --port 6400 --reload
+    uv run python server_main.py --port 1145 --reload
     ```
     > 若输出文件（如 GameDev）触发重启导致任务中断、进度丢失，请去掉 `--reload`。
 
 2.  **启动前端**：
     ```bash
     cd frontend
-    VITE_API_BASE_URL=http://localhost:6400 npm run dev
+    VITE_API_BASE_URL=http://localhost:1145 npm run dev
     ```
     > 然后访问 Web 控制台：**[http://localhost:5173](http://localhost:5173)**。
 
     > **💡 提示**：如果前端无法连接后端，可能是默认端口 `6400` 已被占用。
     > 请将前后端同时切换到一个空闲端口，例如：
     >
-    > * **后端**：启动时指定 `--port 6401`
+    > * **后端**：启动时指定 `--port 1145`
     > * **前端**：设置 `VITE_API_BASE_URL=http://localhost:6401`
 
 #### 常用命令
